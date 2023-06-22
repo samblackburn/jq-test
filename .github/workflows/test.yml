@@ -13,9 +13,10 @@ jobs:
         with:
           version: 1.6
       - name: Run a multi-line script
+        shell: bash
         run: |
           dotnet new console
           echo 'Console.WriteLine("{ \"Hello World\": [1, 2, 3] }");' > Program.cs
-          echo 'echo starting; dotnet run | jq; echo done' > test.sh
-          bash test.sh
-          echo 'Script finished.'
+          echo starting
+          dotnet run | jq
+          echo done
