@@ -12,7 +12,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           dotnet new console
-          echo Console.WriteLine\(\"{ [1, 2, 3] }\"\)\; > Program.cs
+          echo 'Console.WriteLine("{ [1, 2, 3] }");' > Program.cs
           echo dotnet run
           dotnet run
           echo dotnet run piped into jq
