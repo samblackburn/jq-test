@@ -1,0 +1,20 @@
+name: Test out jq in a pipeline
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: setup-dotnet@v3
+      - name: Run a multi-line script
+        run: |
+          dotnet new console
+          echo Console.WriteLine\(\"{ [1, 2, 3] }\"\)\; > Program.cs
+          echo dotnet run
+          dotnet run
+          echo dotnet run piped into jq
+          dotnet run | jq
+          echo Done.
