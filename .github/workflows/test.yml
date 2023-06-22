@@ -9,7 +9,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/setup-dotnet@v3
-      - uses: actions/install-jq@v1
+      - uses: dcarbone/install-jq-action@v1.0.1
         with:
           version: 1.6
       - name: Run a multi-line script
