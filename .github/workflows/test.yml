@@ -14,5 +14,5 @@ jobs:
           dotnet new console
           echo 'Console.WriteLine("{ \"Hello World\": [1, 2, 3] }");' > Program.cs
           echo 'echo starting; dotnet run | jq; echo done' > test.sh
-          sh test.sh
+          bash test.sh
           echo 'Script finished.'
