@@ -9,6 +9,9 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/setup-dotnet@v3
+      - uses: actions/install-jq@v1
+        with:
+          version: 1.6
       - name: Run a multi-line script
         run: |
           dotnet new console
