@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-      - uses: setup-dotnet@v3
+      - uses: actions/setup-dotnet@v3
       - name: Run a multi-line script
         run: |
           dotnet new console
