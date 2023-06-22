@@ -8,15 +8,16 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
+      - uses: crazy-max/ghaction-chocolatey@v2
+        with:
+          args: install git --install-args '/DIR=C:\Git'
       - uses: actions/setup-dotnet@v3
       - uses: dcarbone/install-jq-action@v1.0.1
         with:
           version: 1.6
       - name: Run a multi-line script
-        shell: bash
         run: |
           dotnet new console
           echo 'Console.WriteLine("{ \"Hello World\": [1, 2, 3] }");' > Program.cs
-          echo starting
-          dotnet run | jq
-          echo done
+          echo 'echo starting; dotnet run | jq; echo done' > test.sh
+          C:\Git\bin\bash.exe test.sh
