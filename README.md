@@ -15,7 +15,7 @@ dotnet run | jq
 
 ## Root cause
 
-Package | Buggy version | Fixed version | Release notes
+Package | Buggy version | Fixed version | Links
 ------- | ------------- | --------------| --------------
-git     | 2.40.1        | 2.41.1        | [here](https://github.com/git-for-windows/build-extra/blob/main/ReleaseNotes.md#changes-since-git-for-windows-v2410-june-1st-2023)
-cygwin  | 3.4.6         | 3.4.7         | [here](https://github.com/cygwin/cygwin/commit/e5fcc5837c9594ccb7d0d6f40af69f266f606c5b)
+git     | 2.40.1        | 2.41.1        | [Release notes](https://github.com/git-for-windows/build-extra/blob/main/ReleaseNotes.md#changes-since-git-for-windows-v2410-june-1st-2023)
+cygwin  | 3.4.6         | 3.4.7         | [Presumed fix](https://github.com/cygwin/cygwin/commit/e5fcc5837c9594ccb7d0d6f40af69f266f606c5b)
