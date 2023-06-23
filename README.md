@@ -1,6 +1,6 @@
 # jq-test
 
-Repo to repro what appears to be a bug in bash.
+Repo to repro what appears to be a bug in ~bash~ cygwin.
 
 [The GitHub Actions workflow](.github/workflows/test.yml) contains the repro itself:
 ```
