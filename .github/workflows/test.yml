@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: crazy-max/ghaction-chocolatey@v2
         with:
-          args: install git --install-args '/DIR=C:\Git' --version '2.40.1' --no-progress
+          args: install git --install-args '/DIR=C:\Git' --no-progress
       - uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 7.0.304
@@ -19,6 +19,7 @@ jobs:
           version: 1.6
       - name: Run a multi-line script
         run: |
+          bash --version
           dotnet new console
           echo 'Console.WriteLine("{ \"Hello World\": [1, 2, 3] }");' > Program.cs
           echo 'echo starting; dotnet run | jq; echo done' > test.sh
