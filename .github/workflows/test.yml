@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: crazy-max/ghaction-chocolatey@v2
         with:
-          args: install git --install-args '/DIR=C:\Git' --no-progress
+          args: install git --install-args '/DIR=C:\Git' --no-progress --version=2.40.0
       - uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 7.0.304
