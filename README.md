@@ -11,4 +11,4 @@ dotnet run | jq
 `jq` should pretty-print the json array to the workflow run log. [This run](https://github.com/samblackburn/jq-test/actions/runs/5356531849/jobs/9716165600) did not reproduce the issue.
 
 ## Observed behaviour
-`jq` exits before `dotnet` has produced any output. [This run](https://github.com/samblackburn/jq-test/actions/runs/5356934491)reproduced the issue.
+`jq` exits before `dotnet` has produced any output. [This run](https://github.com/samblackburn/jq-test/actions/runs/5356934491) reproduced the issue.
